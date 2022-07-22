@@ -36,7 +36,6 @@ main {
   width: 576px;
   height: 432px;
 
-  /* border: 1px solid black; */
   border-radius: 10px;
 
   display: flex;
@@ -73,6 +72,7 @@ section {
 }
 
 #title {
+  font-size: 0.9rem; /* Instead of smallcaps */
   letter-spacing: 0.25em;
   color: hsl(228, 12%, 48%);
 }
@@ -138,6 +138,58 @@ button:hover {
   left: 3px;
 }
 
-/* Dark cyan: hsl(158, 36%, 37%)
-Very dark blue: hsl(212, 21%, 14%)
-Dark grayish blue: hsl(228, 12%, 48%) */
+@media (max-width: 700px) {
+  .attribution {
+    width: 100%;
+  }
+  main {
+    width: 337px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-container {
+    background-size: cover;
+    background-position: center;
+
+    height: 40%;
+    width: 100%;
+
+    border-radius: 10px 10px 0 0;
+  }
+
+  .info {
+    height: 60%;
+    width: 100%;
+
+    border-radius: 0 0 10px 10px;
+
+    box-sizing: border-box;
+  }
+
+  #title {
+    font-size: 0.9rem; /* Instead of smallcaps */
+    position: relative;
+    top: 10px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    top: 2px;
+  }
+
+  p {
+    bottom: 20px;
+  }
+
+  .prices {
+    bottom: 20px;
+  }
+
+  button {
+    position: relative;
+    bottom: 10px;
+  }
+}
